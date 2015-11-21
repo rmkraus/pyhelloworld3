@@ -62,4 +62,3 @@ setup(
         'testing': ['pytest'],
     }
 )
-
