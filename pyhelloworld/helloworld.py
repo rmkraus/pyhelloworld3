@@ -4,5 +4,12 @@
 
 import colorise
 
-def hello_world():
+def set_color(color):
+    colorise.set_color(color)
+
+def hello_world(color=False):
+
+    if color:
+        set_color('purple')
+
     print 'Hello World !'
