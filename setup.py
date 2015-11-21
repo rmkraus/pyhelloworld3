@@ -42,7 +42,7 @@ setup(
     install_requires=['colorise>=0.1.4'],
     cmdclass={'test': PyTest},
     author_email='jripsl@outlook.com',
-    description='Python project template printing Hello world',
+    description='Hello world',
     long_description=long_description,
     packages=['pyhelloworld'],
     include_package_data=True,
