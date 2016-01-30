@@ -1,55 +1,20 @@
-from __future__ import print_function
-from setuptools import setup, find_packages
-from setuptools.command.test import test as TestCommand
-import io
-import codecs
-import os
-import sys
-
-import pyhelloworld
-
-here = os.path.abspath(os.path.dirname(__file__))
-
-def read(*filenames, **kwargs):
-    encoding = kwargs.get('encoding', 'utf-8')
-    sep = kwargs.get('sep', '\n')
-    buf = []
-    for filename in filenames:
-        with io.open(filename, encoding=encoding) as f:
-            buf.append(f.read())
-    return sep.join(buf)
-
-long_description = read('README.md', 'CHANGES.md')
-
-class PyTest(TestCommand):
-    def finalize_options(self):
-        TestCommand.finalize_options(self)
-        self.test_args = []
-        self.test_suite = True
-
-    def run_tests(self):
-        import pytest
-        errcode = pytest.main(self.test_args)
-        sys.exit(errcode)
+from setuptools import setup
+import pyhelloworld3
 
 setup(
-    name='pyhelloworld',
-    version=pyhelloworld.__version__,
-    url='http://github.com/jripsl/pyhelloworld/',
+    name='pyhelloworld3',
+    version=pyhelloworld3.__version__,
+    url='http://github.com/rmkraus/pyhelloworld3/',
     license='Apache Software License',
-    author='jripsl',
-    tests_require=['pytest'],
-    install_requires=['colorise>=0.1.4'],
-    cmdclass={'test': PyTest},
-    author_email='jripsl@outlook.com',
+    author='rmkraus',
     description='Hello world',
-    long_description=long_description,
-    packages=['pyhelloworld'],
+    long_description="Smallest package ever"
+    "Useful for testing automated package management",
+    packages=['pyhelloworld3'],
     include_package_data=True,
     platforms='any',
-    test_suite='pyhelloworld.test.test_pyhelloworld',
-    classifiers = [
-        'Programming Language :: Python',
+    classifiers=[
+        'Programming Language :: Python 3',
         'Development Status :: 4 - Beta',
         'Natural Language :: English',
         'Environment :: Web Environment',
@@ -57,8 +22,5 @@ setup(
         'License :: OSI Approved :: Apache Software License',
         'Operating System :: OS Independent',
         'Topic :: Software Development :: Libraries :: Python Modules',
-        ],
-    extras_require={
-        'testing': ['pytest'],
-    }
+        ]
 )
