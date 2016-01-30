@@ -4,9 +4,10 @@ import pyhelloworld3
 setup(
     name='pyhelloworld3',
     version=pyhelloworld3.__version__,
-    url='http://github.com/rmkraus/pyhelloworld3/',
+    url='https://github.com/rmkraus/pyhelloworld3/',
     license='Apache Software License',
-    author='rmkraus',
+    author='Ryan Kraus',
+    author_email='automicus@gmail.com',
     description='Hello world',
     long_description="Smallest package ever"
     "Useful for testing automated package management",
@@ -14,7 +15,7 @@ setup(
     include_package_data=True,
     platforms='any',
     classifiers=[
-        'Programming Language :: Python 3',
+        'Programming Language :: Python',
         'Development Status :: 4 - Beta',
         'Natural Language :: English',
         'Environment :: Web Environment',
